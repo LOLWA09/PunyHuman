@@ -1,0 +1,23 @@
+name: Feature proposal
+description: Propose a focused improvement to PunyHuman
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: textarea
+    attributes:
+      label: Problem
+      description: What recurring developer problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposed outcome
+      description: Describe the user-visible result, not only the implementation.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Privacy and maintenance impact
+      description: Note any network requests, dependencies, stored data, or long-term cost.
+    validations:
+      required: true

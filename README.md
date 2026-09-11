@@ -44,6 +44,22 @@ tests/core.test.js     Node-native unit tests
 
 The project deliberately uses browser standards instead of a large dependency tree. This reduces supply-chain risk, keeps startup instant, and makes the code approachable for contributors.
 
+## Engineering standard
+
+PunyHuman treats maintainability as a product feature:
+
+- [Architecture](ARCHITECTURE.md) documents system boundaries, trust assumptions, and trade-offs.
+- [ADR 0001](docs/adr/0001-local-first-zero-runtime-dependencies.md) records why the project is local-first and dependency-free.
+- [Quality strategy](docs/QUALITY.md) defines completion, automated checks, release validation, and the performance budget.
+- [Changelog](CHANGELOG.md) makes meaningful evolution visible.
+- Repository-contract checks prevent accidental removal of critical project files or introduction of unreviewed runtime dependencies.
+
+Run the complete quality gate with:
+
+```bash
+npm run check
+```
+
 ## Roadmap
 
 - [ ] JSON tree viewer and JSONPath queries
