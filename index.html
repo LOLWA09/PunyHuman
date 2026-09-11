@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PunyHuman is a fast, private, offline-capable developer toolbox that runs entirely in your browser." />
+  <meta name="theme-color" content="#0a0a0b" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="src/styles.css" />
+  <title>PunyHuman — Big tools. Zero backend.</title>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to workspace</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="PunyHuman home"><span class="brand-mark">P</span><span>PunyHuman</span></a>
+    <nav aria-label="Primary navigation"><a href="#tools">Tools</a><a href="https://github.com/LOLWA09/PunyHuman" target="_blank" rel="noreferrer">GitHub ↗</a><button id="theme-toggle" class="icon-button" aria-label="Toggle theme">◐</button></nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span></span> Private by design · Works offline</div>
+      <h1>Big tools.<br /><em>Zero backend.</em></h1>
+      <p>A focused developer toolbox for transforming, inspecting, and generating data. Everything stays in your browser.</p>
+      <div class="hero-actions"><button class="primary" data-open-tool="json">Open JSON Studio</button><button class="secondary" id="command-trigger"><kbd>⌘</kbd><kbd>K</kbd> Quick switch</button></div>
+      <div class="trust-row"><span>NO TRACKING</span><span>NO SIGN-UP</span><span>NO UPLOADS</span><span>OPEN SOURCE</span></div>
+    </section>
+    <section id="tools" class="tools-section" aria-labelledby="tools-title">
+      <div class="section-heading"><div><p class="kicker">THE TOOLBOX</p><h2 id="tools-title">Small utilities, sharp edges.</h2></div><p>Built for the tiny tasks that interrupt deep work.</p></div>
+      <div class="tool-grid">
+        <button class="tool-card featured" data-open-tool="json"><span class="tool-index">01</span><span class="tool-icon">{ }</span><span><b>JSON Studio</b><small>Format, minify, validate, and inspect.</small></span><span class="arrow">↗</span></button>
+        <button class="tool-card" data-open-tool="jwt"><span class="tool-index">02</span><span class="tool-icon">JWT</span><span><b>JWT Inspector</b><small>Decode headers and payloads locally.</small></span><span class="arrow">↗</span></button>
+        <button class="tool-card" data-open-tool="base64"><span class="tool-index">03</span><span class="tool-icon">64</span><span><b>Base64</b><small>Encode and decode Unicode safely.</small></span><span class="arrow">↗</span></button>
+        <button class="tool-card" data-open-tool="url"><span class="tool-index">04</span><span class="tool-icon">%</span><span><b>URL Codec</b><small>Encode or decode URL components.</small></span><span class="arrow">↗</span></button>
+        <button class="tool-card" data-open-tool="uuid"><span class="tool-index">05</span><span class="tool-icon">ID</span><span><b>UUID Factory</b><small>Generate collision-resistant UUIDs.</small></span><span class="arrow">↗</span></button>
+        <button class="tool-card" data-open-tool="hash"><span class="tool-index">06</span><span class="tool-icon">#</span><span><b>SHA-256</b><small>Hash text with the Web Crypto API.</small></span><span class="arrow">↗</span></button>
+      </div>
+    </section>
+    <section id="workspace" class="workspace" aria-live="polite">
+      <div class="workspace-head"><div><p class="kicker">WORKSPACE</p><h2 id="workspace-title">JSON Studio</h2></div><div class="status"><span></span> Runs locally</div></div>
+      <div id="editor-tool" class="editor-tool"><label for="input">Input</label><textarea id="input" spellcheck="false" placeholder='Paste something here…'></textarea><div class="action-row"><button id="primary-action" class="primary">Format</button><button id="secondary-action" class="secondary">Minify</button><button id="clear-action" class="ghost">Clear</button><button id="copy-action" class="ghost push">Copy output</button></div><label for="output">Output</label><textarea id="output" spellcheck="false" readonly placeholder="Your result will appear here."></textarea><p id="message" class="message">Ready. Your data never leaves this device.</p></div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">P</span><span>PunyHuman</span></a><p>Built for humans who ship.</p><a href="https://github.com/LOLWA09/PunyHuman">MIT License · GitHub ↗</a></footer>
+  <dialog id="command-dialog"><form method="dialog"><div class="command-input"><span>⌕</span><input id="command-search" placeholder="Search tools…" autocomplete="off" /><button aria-label="Close">ESC</button></div><div id="command-list"></div></form></dialog>
+  <script src="src/core.js"></script><script src="src/app.js"></script>
+</body>
+</html>

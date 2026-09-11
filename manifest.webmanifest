@@ -1,0 +1,1 @@
+{"name":"PunyHuman Developer Toolbox","short_name":"PunyHuman","description":"Private, offline-capable browser utilities for developers.","start_url":"./","display":"standalone","background_color":"#f5f3ee","theme_color":"#0a0a0b","icons":[{"src":"assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
