@@ -1,0 +1,6 @@
+# Keep architectural and security-sensitive changes explicitly reviewed.
+* @LOLWA09
+/src/core.js @LOLWA09
+/service-worker.js @LOLWA09
+/SECURITY.md @LOLWA09
+/docs/adr/ @LOLWA09
